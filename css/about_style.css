@@ -1,0 +1,233 @@
+/* about_style.css */
+
+.container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; 
+}
+
+header h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.profile-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section {
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* 추가된 H2, H3 스타일 */
+.bio-section h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center; /* 섹션 제목 가운데 정렬 */
+}
+
+.bio-section h3 {
+    color: #444;
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center; /* 서브 제목 가운데 정렬 */
+}
+
+.bio-section p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: justify; /* 단락 텍스트 양쪽 정렬 유지 */
+}
+
+.bio-section strong {
+    color: #007bff;
+    font-weight: 700;
+}
+
+/* --- 기존 스타일 유지 --- */
+
+/* 수평선/구분선 스타일 */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 40px 0; 
+}
+
+/* 인용 블록 (Blockquote) 스타일 */
+.pull-quote {
+    background-color: #f8f8f8; 
+    border-left: 5px solid #6c757d; 
+    padding: 20px;
+    margin: 40px 0; 
+    font-style: italic; 
+    color: #555;
+    font-size: 1.15em;
+    line-height: 1.8;
+    text-align: center; 
+    border-radius: 0 5px 5px 0; 
+}
+
+/* 강조된 배경색의 박스 스타일 */
+.info-box {
+    background-color: #e6f7ff; 
+    border: 1px solid #99d6ff; 
+    padding: 25px;
+    margin: 40px 0; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.info-box h3 {
+    color: #0056b3; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.info-box p {
+    text-align: justify; 
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+/* about_style.css */
+
+/* (생략된 상위/하위 CSS 코드는 그대로 유지하세요) */
+
+/* --- 영화 목록 스타일 (Grid + 이미지 포함) --- */
+.movie-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+}
+
+.movie-list li {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* ★★★ 이 부분이 수정되었습니다 ★★★ */
+.movie-list li img {
+    width: 100%; /* 부모 li 너비에 맞춤 */
+    height: 120px; /* 모든 이미지의 높이를 120px로 고정 (원하는 크기로 조절 가능) */
+    object-fit: contain; /* 이미지 비율을 유지하며, 공간에 '포함'되도록 (잘림 없음, 여백 발생 가능) */
+    /* object-fit: cover; // 만약 이미지가 잘려도 공간을 가득 채우고 싶다면 'cover' 사용 */
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+
+.movie-list li strong {
+    font-size: 1.1em;
+    color: #333;
+    padding: 0 10px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-list li::before {
+    content: none;
+}
+
+/* --- 모바일 반응형 (Grid에 맞게 수정) --- */
+@media (max-width: 768px) {
+    .movie-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .movie-list li {
+        padding-bottom: 10px;
+    }
+    /* ★★★ 이 부분이 수정되었습니다 ★★★ */
+    .movie-list li img {
+        height: 100px; /* 모바일에서 이미지 높이 조절 */
+    }
+    .movie-list li strong {
+        font-size: 1em;
+    }
+
+    /* (생략된 다른 반응형 스타일은 그대로 유지하세요) */
+}
+
+/* --- 모바일 반응형 (Grid에 맞게 수정) --- */
+@media (max-width: 768px) {
+    .movie-list {
+        grid-template-columns: 1fr; /* 모바일에서는 1개 컬럼으로 변경 */
+        gap: 10px; /* 모바일에서 간격 줄이기 */
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .movie-list li {
+        padding: 10px 15px;
+        font-size: 1em; /* 모바일에서 폰트 크기 조절 */
+    }
+
+    .container {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    .bio-section h2 {
+        font-size: 1.5em;
+    }
+    .bio-section h3 {
+        font-size: 1.2em;
+    }
+    .bio-section p {
+        font-size: 1em;
+    }
+    .pull-quote, .info-box {
+        margin: 20px 0; 
+        padding: 15px;
+    }
+}
