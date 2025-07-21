@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 푸시될 때 워크플로우 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # GitHub Actions를 실행할 환경
+
+    steps:
+    - name: Checkout repository # 저장소 코드를 가져옴
+      uses: actions/checkout@v4
+
+    - name: Deploy to GitHub Pages # GitHub Pages에 배포
+      uses: peaceiris/actions-gh-pages@v4 # GitHub Pages 배포를 위한 액션 사용
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 토큰 사용 (자동 생성됨)
+        publish_dir: ./web/bjs_fanpage # ⭐★★ 여기에 배포할 폴더 경로 지정 ★★⭐
+        cname: # 커스텀 도메인을 사용하지 않으면 비워두세요
