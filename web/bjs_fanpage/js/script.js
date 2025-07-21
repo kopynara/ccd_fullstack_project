@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // 텍스트가 사라진 직후 메인 페이지로 전환
                 setTimeout(() => {
-                    window.location.href = 'index.html'; // 메인 페이지 경로
+                    window.location.href = 'index_original.html'; // 메인 페이지 경로
                 }, 100); // 텍스트 사라짐 + 짧은 대기 시간
             }, 1000); // 타이핑이 모두 완료된 후 '방준석' 글자가 유지되는 시간 (ms)
         }
