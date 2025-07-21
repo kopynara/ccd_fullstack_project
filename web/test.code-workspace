@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Downloads/doit-hcj"
+		},
+		{
+			"path": "../../../first_hcj_ccd"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "test"
+	}
+}

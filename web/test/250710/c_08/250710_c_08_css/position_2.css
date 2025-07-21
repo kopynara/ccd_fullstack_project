@@ -1,0 +1,7 @@
+.wrapper {position: relative;}
+.box {width: 100px; height: 100px; }
+#fixed {position: fixed; right: 30px; bottom: 30px; }
+#box1 {position: static; background: red;}
+#box2 {position: relative; background: yellow; left: 200px;}
+#box3 {position: absolute; background: blue; left: 150px; right: 50px;}
+#box4 {background: violet;}

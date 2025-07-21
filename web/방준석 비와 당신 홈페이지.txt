@@ -1,0 +1,185 @@
+250718
+
+
+1. 이번에도 포트폴리오용 홈페이지 제작을 해볼거야 
+2. vs code로 포트폴리오 및 후에 배포용으로 사용할 홈페이지를 만들거야.
+3. css와 자바스트립를 적극 활용한 직관적이고 심플하고 세련되고 동적인 홈페이지였으면 하고 
+4. 최소 2페이지여야해 
+5. 나는 초보고 javascript, python처럼 함수와 논리력을 요하는 과정은 많이 부족하니 감안해서 부탁해.
+
+6. 텍스트와 미디어(이미지, 동영상, 오디오, 등등)가 고루 있었으면 하고
+7. 처음부터 전체 코드를 제안해주기 보단 html, css, javascript 순으로 제안을 해줬으면 좋겠고
+8. 프로젝트 폴더 안에 css, js, images, videos, audios 폴더랑 style.css, script.js 파일 만들게
+9. 기본 경로는 C:\Users\Admin\Desktop\first_hcj_ccd\hcj_ccd 여기야
+10. 기본 경로에 새 프로젝트, 폴더, 파일을 만들 수 있는 vs code내 터미널 명령어 만들어줘
+
+11.구글 폰트랑 아이콘 폰트 사용해줘
+14. 위에 최소 2페이지라고 얘기했지만 내가 제안하는 방향과 내용에 맞게 더 많아져도 해볼게
+15. 방준석 관련 이미지나 동영상을 다운받을 수 있는 링크나 다운로드 못하더라도 캡쳐할 수 있는 링크도 정리해줘
+
+16. 대상은 대한민국 뮤지션 방준석님의 팬페이지 제작해보자
+17. 주요 키워드는 방준석, 음악 감독, 한국 모던락 1세대, 명곡이자 국민 애창곡 '비와 당신'의 원작자
+18. 담겼으면 하는 내용과 컨텐츠는 방준석 소개, 유일한 솔로 앨범 방준석 1집, 비와 당신의 다양한 버젼
+19. 가장 첫번째 페이지는 방준석 솔로 1집 앨범 커버를 css와 javascript로 no repeat에 정적으로 만들고 싶고
+20. 비와 당신은 유튜브 링크를 걸까해
+
+
+ㅡ
+ㅡ
+ㅡ
+
+인트로***
+
+인트로 페이지에 아래 내용을 모두 적용할거고
+
+첫번째는 페이지 로드 시 배경 이미지가 서서히 나타나고
+
+두번째는 마우스를 인트로 페이지 위에 올렸을 때 이미지의 블러 강도나 밝기, 오버레이 투명도 등이 변하도록해주고
+
+세번째는 클릭시 '한글로 화면 가득 '방준석' 세글자가 타이핑 되었다가 번썩 사라지면서 메인 페이지로 전환되도록 하는 
+자바스크립트 코드랑 인트로 페이지 관련 코드만 우선 알려줘 복붙할 수 있게
+
+ㅡ
+ㅡ
+ㅡ
+
+
+
+방준석***
+
+방준석: 한국 음악과 영화를 수놓은 선율의 장인
+방준석은 대한민국의 싱어송라이터이자 영화 음악 작곡가입니다.
+
+1994년, 그는 이승열과 함께 유앤미블루라는 밴드를 결성했습니다. 
+유앤미블루는 1집 앨범 Nothing's Good Enough를 발표하며 국내에 모던 록 음악을 도입했습니다. 
+이 밴드는 평단의 극찬을 받았으나 상업적으로 큰 성과를 거두지는 못했습니다. 
+이후 방준석은 영화 음악 감독으로 활동했습니다.
+
+그의 영화 및 드라마 OST 작품으로는 《라디오 스타》, 《공동경비구역 JSA》, 《남과 여》, 《베테랑》, 《사도》, 
+《럭키》, 《신과함께-죄와 벌》, 《모가디슈》 등이 있습니다. 
+영화 **《베테랑》의 메인 테마 '베테랑 팀 - Team Veteran'**과 
+영화 **《라디오스타》의 "비와 당신"**은 그가 작사/작곡한 곡으로 잘 알려져 있습니다. 
+그는 조영욱, 이병우, 달파란, 장영규 등과 함께 국내 영화 음악계의 주요 인물로 꼽힙니다.
+
+영화 음악 작업 외에도, 그는 어어부밴드의 보컬 백현진과 함께 방백이라는 프로젝트 밴드를 결성하여 활동했습니다.
+
+왕성한 활동을 이어가던 중 위암 치료를 하였고 완치 판정을 받기도 했으나
+재발하여 투병을 이어가다 51세로 2022년 3월 26일 오전 7시 위암으로 사망하였습니다. 
+2024년 영화 《베테랑2》에서도 그를 추모하는 문구가 나왔다.
+
+ㅡ
+ㅡ
+
+앨범 소개***
+
+앨범 소개
+고(故)방준석 음악감독의 1주기를 기리는 추모음반 [TEMPEST] (Limited Edition)가 발매된다. 방준석 음악감독이 직접 가창한 곡들을 모은 앨범으로 [후아유], [...ing], [오직 그대만] OST에 수록되었던 영화음악 뿐만 아니라, 고인의 생전에 공개되지 않았던 미발표 곡들까지 담겨져 있다.
+
+1. 꽃을 든 남자 (Man with Flowers)
+꽃을 든 남자 OST (1997) Courtesy of Woongjin Thinkbig (웅진씽크빅)
+
+2. 혼잣말 (Soliloquy)
+후아유 OST (2002) Courtesy of Myung Films (명필름)
+
+3. 나의 너 (My You)
+후아유 OST (2002) Courtesy of Myung Films (명필름)
+
+4. Bird
+...ing OST (2003) Courtesy of Aram Pictures Inc. (영화사 아람)
+
+5. 그녀입니다 (Ella)
+...ing OST (2003) Courtesy of Aram Pictures Inc. (영화사 아람)
+
+6. Perfidia
+시간의 춤 OST (2009) Courtesy of Music Cube (뮤직큐브)
+
+7. 느낄 수 있어 널 (I Can Feel You)
+오직 그대만 OST (2011) Courtesy of Showbox (쇼박스)
+
+8. Don’t Go
+오직 그대만 OST (2011) Courtesy of Showbox (쇼박스)
+
+9. Ladrona
+도둑들 OST (2012) Courtesy of Caper Film (케이퍼 필름)
+
+10. 안녕이란 말도 못하고 (Tempest)
+GoGo70 OST Demo / Unreleased (2008.09.10)
+
+11. 청춘의 불꽃 (Boiling Blood)
+GoGo70 OST Demo / Unreleased (2007.12.26)
+Bass, Drum and Chorus re-recorded and remastered (2023.01.27)
+
+12. Another Day
+Peso OST (2004.09.22) Remastered (2023.03.01)
+
+13. 비와 당신 (Rain and You)
+라디오 스타 OST Demo Song / Unreleased (2008.09.10)
+
+14. Solo (Working Title)
+Unreleased Song (2007.10.22) Remastered (2023.03.01)
+
+15. Breeze (Working Title)
+Unfinished/Unreleased Song (2003.10.26) Remastered (2023.03.01)
+
+16. Home (Working Title)
+Unreleased Song (2002.04.11)
+
+17. 3 y 4 (Working Title)
+Unfinished Song (2004.12.21) Remastered (2023.03.01)
+
+18. Bird (Ver. 2)
+Unreleased Song (2003.10.28)
+
+19. Star (Working Title)
+Unreleased Song (2004.10.21)
+
+
+[TEMPEST]
+
+Music by 방준석
+Except for Perfidia and Ladrona
+
+Produced by 방준원
+Mastered by 박병준
+
+Production: ONEstudio
+Distribution: Blueboy
+
+Photograph Credits
+Performance: ㈜뮤직웰
+Flowers: 방준석
+
+Design: Jaeyac
+ㅡ
+ㅡ
+ㅡ
+bjs_activities.html
+
+
+<비와 당신>의 원작자 버젼
+
+유튜브 링크 https://youtu.be/LrKEOgduQ98?si=VJte6kfJYTPNzkKc
+위 링크의 섬네일 C:\Users\Admin\Desktop\first_hcj_ccd\hcj_ccd\bjs_fanpage\images 폴더에 uandmeblue.jpg 파일
+
+
+<학수고대 했던 날>
+유튜브 링크 https://youtu.be/kZhE14DWVGg?si=hCpuDu3bx1YOczwo
+위 링크의 섬네일 C:\Users\Admin\Desktop\first_hcj_ccd\hcj_ccd\bjs_fanpage\images 폴더에 bangback.jpg 파일 
+ㅡ
+ㅡ
+ㅡ
+
+홈 화면인 인덱스 페이지 수정은 아래와 같이 해줘
+
+지금은 수직 방향으로 쭉 나열되어 있고 이거를 수평으로 할거야
+이미지 크기는 화면 가로 규격에 맞게 이미지 크기를 조절해서 같은 사이즈로 해주고
+이미지 밑에 예를들면 '방준석 소개' '그의 삶과 음악 여행'와 같은
+<h2>방준석 소개</h2>
+<p>그의 삶과 음악 여행</p>
+은 이미지 밑에 넣어주고
+무엇보다 중요한건 지금 어느 곳을 클릭해도 페이지 이동이 되는데
+각 메뉴별
+방준석 소개와 방준석 활동 방준석 솔로 앨범에서 이미지를 클릭 했을 때만 페이지 이동이 가능하게 해줘
+ㅡ
+ㅡ
+ㅡ

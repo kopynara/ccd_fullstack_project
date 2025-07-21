@@ -1,0 +1,12 @@
+.box {
+      background: blue; width: 100px;height: 100px;
+      }
+
+#fixed {
+        position: fixed; right: 30px; bottom: 30px;
+        }
+
+#id1 {position: static; letter-spacing: 2px;}
+#id2 {position: relative; left: 20px; top: -50px; letter-spacing: 2px;}
+#id3 {position: ;}
+#id4 {position: ;}

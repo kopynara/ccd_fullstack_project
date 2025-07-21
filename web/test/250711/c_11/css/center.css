@@ -1,0 +1,22 @@
+
+    /* Do it! 버튼을 화면 중앙에 배치하기 */
+    * {
+      margin:0;
+      box-sizing: border-box;
+    }
+    body {      
+      background:url('/250711/c_11/images/bg5.jpg') no-repeat left top fixed;
+      background-size:cover;    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;  
+    }
+    button {
+      background-color:#ccc;
+      font-size: 1.2em; 
+      padding:0.2em 0.5em;
+      border:none;
+      border-radius:5px;    
+      box-shadow:1px 1px 2px #fff;  
+    }

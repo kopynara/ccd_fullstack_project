@@ -1,0 +1,145 @@
+/* activities_style.css */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 반응형 그리드 */
+    gap: 30px; /* 카드 사이 간격 */
+    justify-content: center; /* 카드 중앙 정렬 */
+}
+
+.activity-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* 이미지 둥근 모서리 적용 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 클릭 가능한 요소임을 표시 */
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* activities_style.css */
+
+/* (앞부분 생략) */
+
+.card-image-wrapper {
+    width: 100%;
+    height: 350px; /* 또는 300px 등 원하는 높이로 변경 */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+/* ★★★ 이 부분이 수정됩니다 (object-fit: contain; 과 height: auto;) ★★★ */
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%; /* 부모 래퍼 높이에 맞춤 (이 부분은 유지하고 object-fit만 변경) */
+    object-fit: contain; /* 이미지가 짤리지 않고 원본 비율 유지하며 영역 안에 전체 보이도록 */
+    display: block; /* 이미지 아래 여백 제거 */
+    transition: transform 0.3s ease; /* 호버 효과를 위한 전환 */
+}
+
+.card-image-wrapper img:hover {
+    transform: scale(1.05); /* 호버 시 약간 확대 */
+}
+
+/* (뒷부분 생략) */
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* 남은 공간 채우기 */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-size: 1.6em;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-content .description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* 설명 텍스트가 공간을 채우도록 */
+}
+
+.card-content .youtube-link {
+    display: inline-block;
+    background-color: #e74c3c; /* YouTube 느낌의 빨간색 */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.card-content .youtube-link:hover {
+    background-color: #c0392b;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .activities-grid {
+        grid-template-columns: 1fr; /* 모바일에서는 한 줄에 하나씩 */
+    }
+    .card-image-wrapper {
+        height: 180px; /* 모바일에서 이미지 높이 조절 */
+    }
+    .card-image-wrapper img { /* 모바일 반응형에서도 object-fit: contain; 적용 */
+        object-fit: contain; 
+    }
+}

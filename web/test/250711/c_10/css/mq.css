@@ -1,0 +1,28 @@
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    /* Do it! 미디어 쿼리 사용  */
+    body {
+      background: url(/250711/c_10/images/bg-light.jpg) no-repeat fixed;  
+      background-size: cover;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1023px)
+    {body {
+            background: url(/250711/c_10/images/bg-dark.jpg) no-repeat fixed;
+            background-size: cover;
+            color: #fff;
+    }}
+    @media screen and (max-width:767px)
+    {body {
+            background: url(/250711/c_10/images/bg-light.jpg) no-repeat fixed;
+            background-size: cover;
+            color: #123456;
+    }}

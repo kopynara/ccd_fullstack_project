@@ -1,0 +1,10 @@
+button {
+        padding: 3px 20px;
+        border: 1px solid gray;
+        border-radius: 10px;
+}
+
+#wrapper {
+          width: 210px;
+          margin: 10px auto;
+}

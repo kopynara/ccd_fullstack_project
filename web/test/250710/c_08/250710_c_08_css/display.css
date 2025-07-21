@@ -1,0 +1,10 @@
+li {
+    display: inline-block;
+    list-style: none;
+    border: 1px solid blue;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 10px;
+}

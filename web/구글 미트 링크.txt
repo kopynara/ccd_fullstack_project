@@ -1,0 +1,9 @@
+https://meet.google.com/sta-iezu-put
+
+
+https://meet.google.com/sta-iezu-put
+
+
+
+df = pd.read_csv("https://raw.githubusercontent.com/kirenz/datasets/refs/heads/master/gapminder.csv")
+

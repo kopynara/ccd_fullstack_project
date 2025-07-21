@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초경골 나뭇꾼 장작 - 초경골 이야기</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>초경골 나뭇꾼 장작</h1>
+        <p>충북 제천 산골에서 온 자연 그대로의 불꽃을 전합니다.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="about.html">초경골 이야기</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-intro">
+            <h2>초경골 나뭇꾼, 우리의 시작</h2>
+            <img src="./images/about_main_intro.jpg" alt="초경골 나뭇꾼 이야기 메인 이미지" class="about-main-img">
+            <p>깊은 산골 제천에서 시작된 자연 건조 장작의 여정입니다.</p>
+        </section>
+
+        <section id="our-philosophy">
+            <h2>자연과의 약속: 3가지 핵심 가치</h2>
+            <div class="philosophy-gallery">
+                <img src="./images/philosophy_sun.jpg" alt="햇살 이미지: 햇살 건조">
+                <img src="./images/philosophy_wind.jpg" alt="바람 이미지: 바람 건조">
+                <img src="./images/philosophy_forest.jpg" alt="숲 이미지: 지속 가능">
+            </div>
+            <p>오직 햇살과 바람으로, 지속 가능한 자연의 따뜻함을 전합니다.</p>
+        </section>
+
+        <section id="production-process">
+            <h2>장작, 자연에서 온기까지</h2>
+            <video class="process-video" controls>
+                <source src="./videos/process_video.mp4" type="video/mp4">
+                <source src="./videos/process_video.webm" type="video/webm">
+                브라우저가 동영상을 지원하지 않습니다.
+            </video>
+            <p>선별부터 건조, 포장까지 나뭇꾼의 정성을 영상으로 확인하세요.</p>
+        </section>
+
+        <section id="contact-us">
+            <h2>궁금하신가요?</h2>
+            <img src="./images/contact_faq.jpg" alt="문의하기 이미지" class="contact-img">
+            <p>언제든 편하게 문의해주세요. 정성껏 답변해 드립니다.</p>
+            <p><strong>문의 전화: 010-0000-0000</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2025 초경골 나뭇꾼 장작. All rights reserved</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form accept="test.php" method="post">
+
+    <fieldset>
+            <legend>첫번째 정보</legend>
+            <label for="user-id"> 이름: 
+            <input type="text" id="user-id" autofocus required> 
+            </label> <br>
+            <label for="">
+            <input type="text">
+            </label>
+            
+        <br>
+
+        메일: <input type="email" > <br>
+        날짜1: <input type="date"> <br>
+        </fieldset> <br> <br> <br>
+
+        <li>
+            <input type="radio" name="mailing" value="yes" >메일 받겠습니다.
+            <input type="radio" name="mailing" value="no" checked>메일 받지 않겠습니다.
+        </li>
+
+        <input type="submit" value="제출"> <br>
+        <input type="reset" value="다시쓰기"> <br>        
+
+
+    </fieldset>    
+
+    
+<!-- 드롭다운메뉴     -->
+    <label for="prod1">상품 선택</label>
+    <select id="prod1">
+        <optgroup label="1차 선택">
+        <option value="special_3">선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="family_3">가정용 3kg</option>
+        <option value="family_5">가정용 5kg</option>
+        </optgroup>
+        <optgroup label="2차 선택">
+        <option value="special_3">선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="family_3">가정용 3kg</option>
+        <option value="family_5">가정용 5kg</option>
+        </optgroup>
+    </select>
+
+    </form>
+</body>
+</html>

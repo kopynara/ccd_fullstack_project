@@ -1,0 +1,11 @@
+ /* Do it! em 단위로 글자 크기 지정하기 */
+    /* * {margin: 0%;} */
+
+    /* html {font-size: 10px;} */
+    html {font-size: 62.5%;}
+
+    p {font-size: 1.3rem;}
+
+    .content {font-size: 1.5rem;}
+
+    .more {font-size: 1.7rem;}

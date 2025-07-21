@@ -1,0 +1,29 @@
+# Common system files
+.DS_Store
+Thumbs.db
+
+# Node.js and web development ignores (for 'web' folder, if applicable)
+/web/node_modules/
+/web/npm-debug.log*
+/web/yarn-debug.log*
+/web/build/
+/web/dist/
+
+# Python development ignores (for 'python' folder, if applicable)
+/python/__pycache__/
+/python/*.pyc
+/python/.env
+/python/venv/
+/python/.ipynb_checkpoints/
+/python/Untitled*.ipynb
+
+# Other common temporary or log files
+*.log
+*.tmp
+test.txt
+text.txt
+temp/
+
+# IDE specific files
+.vscode/
+.idea/

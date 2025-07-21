@@ -1,0 +1,9 @@
+* {margin: 130;}
+
+h1 {color: #e60f2c;
+background-color: rgb(248, 244, 1);}
+p {color: rgb(112, 108, 103);}
+#line1 {color: blueviolet;}
+.class1 {color: #e60f2c;
+         background-color: #cdeea1;}
+span {color: blue; !important}

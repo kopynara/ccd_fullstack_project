@@ -1,0 +1,23 @@
+#container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;            
+      align-items:  center;      
+      min-height: ;
+      align-content: space-evenly;
+      border: 1px solid blue;
+      width: 500px;
+      height: 400px;
+    }
+    
+    .box {
+      width: 100px;
+      height: 150px;      
+      text-align: center;
+      line-height: 150px;
+    }
+    .box1 {background-color: rgb(240, 224, 159);}
+    .box2 {background-color: blueviolet;}
+    .box3 {background-color: aquamarine;}
+        

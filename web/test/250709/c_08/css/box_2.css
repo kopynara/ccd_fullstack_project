@@ -1,0 +1,28 @@
+
+.shadow {
+         box-shadow: 0px 0px 15px;
+         border-radius: 1%;
+}        
+
+.box {border: 1px solid blue;
+               box-sizing: border-box;
+               border-style: none;
+               width: 400px;
+               /* height: 40px; */
+               margin: 20px;
+               padding: 20px;
+               /* text-align: center;  */
+            }
+            
+.box1 {box-sizing: border-box;}
+
+.box2 {box-sizing: content-box;}
+
+.box-new {
+          border-top: 1px black;
+          background-color: aqua;
+          border-style: dashed;
+          border-color: black;
+          border-width: 13px 5px 75px 37px;
+          border-radius: 10px;  
+            }

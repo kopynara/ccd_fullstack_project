@@ -1,0 +1,609 @@
+/* css/style.css */
+
+/* 1. 기본 스타일 초기화 및 폰트 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+/* Noto Sans KR 폰트 가져오기. 필요시 다른 폰트로 변경 가능 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 패딩과 보더가 요소의 전체 크기에 포함되도록 설정 */
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 기본 폰트 설정 */
+    line-height: 1.6; /* 줄 간격 설정 */
+    color: #333; /* 기본 글자 색상 */
+    background-color: #f8f8f8; /* 웹사이트 배경 색상 */
+    overflow-x: hidden; /* 가로 스크롤바 방지 */
+}
+
+a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상을 부모 요소에서 상속 */
+}
+
+ul {
+    list-style: none; /* 목록의 점 또는 숫자 제거 */
+}
+
+img, video {
+    max-width: 100%; /* 이미지와 비디오가 부모 요소보다 커지지 않도록 설정 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 이미지 하단 미세 여백 제거 */
+}
+
+/* 2. 공통 클래스 스타일 */
+.container {
+    max-width: 1200px; /* 콘텐츠 최대 너비 제한 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 0 20px; /* 좌우 여백 */
+}
+
+.section-title {
+    font-size: 2.5em; /* 섹션 제목 크기 */
+    text-align: center; /* 가운데 정렬 */
+    margin-bottom: 60px; /* 제목 아래 여백 */
+    color: #222;
+    position: relative; /* 가상 요소를 위한 기준점 */
+    padding-bottom: 15px;
+}
+
+.section-title::after { /* 제목 아래에 라인 추가 (세련된 느낌) */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #a0522d; /* 브라운 계열 색상 */
+    border-radius: 2px;
+}
+
+.content-section {
+    padding: 80px 0; /* 상하 여백 */
+}
+
+/* 3. 버튼 스타일 */
+.btn-primary, .btn-secondary {
+    display: inline-block; /* 버튼 크기를 내용에 맞게 조절 */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 호버 시 부드러운 전환 효과 */
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #a0522d; /* 메인 버튼 색상 (갈색 계열) */
+    color: #fff; /* 글자색 흰색 */
+    border: 2px solid #a0522d;
+}
+
+.btn-primary:hover {
+    background-color: #8b4513; /* 호버 시 더 진한 색상 */
+    border-color: #8b4513;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #a0522d;
+    border: 2px solid #a0522d;
+}
+
+.btn-secondary:hover {
+    background-color: #a0522d;
+    color: #fff;
+}
+
+.btn-order { /* 제품 상세 페이지 주문 버튼 */
+    background-color: #4CAF50; /* 초록색 */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-order:hover {
+    background-color: #45a049;
+}
+
+
+/* 4. 헤더 및 내비게이션 */
+#main-header {
+    background-color: rgba(0, 0, 0, 0.7); /* 투명도 있는 검정 배경 */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed; /* 상단에 고정 */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* 다른 요소들 위에 표시 */
+    transition: background-color 0.3s ease; /* 스크롤 시 배경색 변화를 위한 준비 */
+}
+
+/* 헤더 스크롤 시 배경색 변경 (JavaScript와 연동) */
+#main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95); /* 스크롤 시 더 불투명한 배경 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+}
+
+#top-nav {
+    display: flex; /* 로고와 메뉴를 한 줄에 배치 */
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#site-logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#nav-menu {
+    display: flex; /* 메뉴 아이템을 한 줄에 배치 */
+}
+
+#nav-menu li {
+    margin-left: 40px; /* 메뉴 아이템 간 간격 */
+}
+
+#nav-menu a {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding-bottom: 5px; /* 밑줄 효과를 위한 패딩 */
+    position: relative; /* 밑줄 효과를 위한 기준점 */
+}
+
+#nav-menu a::after { /* 호버 시 밑줄 효과 */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease; /* 너비 변화에 부드러운 효과 */
+}
+
+#nav-menu a:hover::after {
+    width: 100%; /* 호버 시 밑줄 채우기 */
+}
+
+/* 5. Hero 섹션 (메인 페이지) */
+#hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 뷰포트 높이 전체 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* 비디오가 튀어나오지 않도록 */
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* 다른 콘텐츠 뒤로 보내기 */
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1; /* 비디오 위에 표시 */
+    background-color: rgba(0, 0, 0, 0.4); /* 텍스트 가독성을 위한 오버레이 */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#hero-section .section-title {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 텍스트 그림자 */
+}
+
+#hero-section .section-title::after { /* 히어로 섹션 제목의 밑줄은 다르게 */
+    background-color: #fff;
+}
+
+#hero-section p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#hero-section .btn-primary {
+    font-size: 1.2em;
+    padding: 18px 40px;
+    border: 2px solid #fff; /* 흰색 테두리 */
+    background-color: rgba(160, 82, 45, 0.8); /* 반투명 배경 */
+}
+
+#hero-section .btn-primary:hover {
+    background-color: #fff;
+    color: #a0522d;
+    border-color: #a0522d;
+}
+
+/* 6. About Us 섹션 */
+#about-us .about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* 이미지와 텍스트 사이 간격 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about-us .about-image {
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* 이미지가 너무 작아지지 않도록 */
+}
+
+#about-us .about-text {
+    flex: 2; /* 텍스트가 더 많은 공간을 차지하도록 */
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+#about-us .about-text p {
+    margin-bottom: 20px;
+}
+
+/* 7. Products Preview 섹션 */
+#products-preview .product-grid {
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 반응형 그리드 */
+    gap: 40px; /* 아이템 간 간격 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#products-preview .product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* 이미지 모서리 둥글게 */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 효과 */
+}
+
+#products-preview .product-item:hover {
+    transform: translateY(-10px); /* 살짝 위로 뜨는 효과 */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+#products-preview .product-item img {
+    width: 100%;
+    height: 250px; /* 이미지 높이 고정 */
+    object-fit: cover; /* 이미지가 잘리지 않고 채워지도록 */
+    border-bottom: 1px solid #eee;
+}
+
+#products-preview .product-item h3 {
+    font-size: 1.8em;
+    margin: 25px 0 15px;
+    color: #a0522d;
+}
+
+#products-preview .product-item p {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+#products-preview .product-item .btn-secondary {
+    margin-bottom: 30px;
+    padding: 10px 25px;
+    font-size: 1em;
+}
+
+/* 8. Testimonials 섹션 (나중에 JavaScript로 슬라이드 구현) */
+#testimonials {
+    background-color: #ede4da; /* 은은한 배경색 */
+    text-align: center;
+}
+
+#testimonials .testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* 슬라이드 아이템이 넘치지 않도록 */
+    white-space: nowrap; /* 슬라이드 아이템들이 한 줄에 정렬되도록 */
+    transition: transform 0.5s ease-in-out; /* JavaScript 이동 효과를 위한 전환 */
+}
+
+.testimonial-item {
+    padding: 30px 50px; /* 좌우 패딩 추가 */
+    font-style: italic;
+    font-size: 1.3em;
+    color: #666;
+    display: inline-block; /* 한 줄에 여러 아이템이 있지만, 너비 조절 가능하게 */
+    width: 100%; /* 슬라이더 컨테이너 너비에 맞춰 조정 */
+    vertical-align: top; /* 이미지 등 세로 정렬 문제 방지 */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+    white-space: normal; /* 텍스트는 줄 바꿈 되도록 */
+}
+
+/* 9. 푸터 */
+#main-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+#main-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#main-footer p {
+    margin-bottom: 10px;
+}
+
+#main-footer address {
+    font-style: normal; /* 기본 기울임꼴 제거 */
+}
+
+/* 10. 제품 상세 페이지 (products.html) 스타일 */
+#products-intro {
+    padding-top: 150px; /* 헤더 고정으로 인한 겹침 방지 */
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+#products-intro .section-title {
+    margin-bottom: 20px;
+}
+
+.product-detail-section {
+    padding: 80px 0;
+    background-color: #fff; /* 제품별 배경색 구분 */
+    margin-bottom: 30px; /* 섹션 간 간격 */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-detail-section:nth-of-type(even) { /* 짝수 번째 제품 상세 섹션은 다른 배경색 */
+    background-color: #f5f5f5;
+}
+
+.product-detail-content {
+    display: flex;
+    flex-direction: column; /* 모바일 우선: 세로 배열 */
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) { /* 태블릿 이상: 가로 배열 */
+    .product-detail-content {
+        flex-direction: row;
+        align-items: flex-start; /* 상단 정렬 */
+    }
+}
+
+.product-gallery {
+    flex: 1;
+    display: grid; /* 여러 이미지 표시를 위한 그리드 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.product-gallery img {
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.product-info h3 {
+    font-size: 2.5em;
+    color: #a0522d;
+    margin-bottom: 25px;
+}
+
+.product-info p {
+    margin-bottom: 20px;
+}
+
+.product-info ul {
+    margin-bottom: 25px;
+    padding-left: 20px; /* 목록 들여쓰기 */
+    list-style: disc; /* 점 목록 스타일 */
+    color: #444;
+}
+
+.product-info ul li {
+    margin-bottom: 10px;
+}
+
+.feature-highlight {
+    font-weight: 700;
+    color: #8b4513; /* 강조 색상 */
+}
+
+.order-section {
+    background-color: #e8f5e9; /* 주문 섹션 배경색 */
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px dashed #4CAF50;
+    margin-top: 30px;
+}
+
+.order-section h4 {
+    font-size: 1.4em;
+    color: #388E3C; /* 초록색 계열 */
+    margin-bottom: 15px;
+}
+
+.order-section p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* 11. 반응형 디자인 (Media Queries) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    #hero-section .section-title {
+        font-size: 2.8em;
+    }
+
+    #hero-section p {
+        font-size: 1.2em;
+    }
+
+    #main-header {
+        padding: 15px 0;
+    }
+
+    #top-nav {
+        flex-direction: column; /* 모바일에서 세로로 정렬 */
+        text-align: center;
+    }
+
+    #site-logo {
+        margin-bottom: 15px;
+    }
+
+    #nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-menu li {
+        margin: 10px 0; /* 세로 간격 */
+        width: 100%;
+    }
+
+    #nav-menu a {
+        padding: 10px 0;
+        display: block; /* 링크 영역 전체 클릭 가능하게 */
+    }
+
+    #about-us .about-content {
+        flex-direction: column; /* 모바일에서 세로로 정렬 */
+        gap: 30px;
+    }
+
+    #about-us .about-image {
+        width: 80%; /* 이미지 크기 조절 */
+    }
+
+    #products-preview .product-grid {
+        grid-template-columns: 1fr; /* 한 줄에 하나씩 */
+    }
+
+    .product-detail-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    #hero-section .section-title {
+        font-size: 2.2em;
+    }
+
+    #hero-section p {
+        font-size: 1em;
+    }
+
+    .hero-overlay {
+        padding: 30px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    #site-logo a {
+        font-size: 1.5em;
+    }
+
+    #nav-menu a {
+        font-size: 1em;
+    }
+
+    .product-info h3 {
+        font-size: 2em;
+    }
+}
+
+/* '맨 위로' 버튼 스타일 */
+#scrollToTopBtn {
+    display: none; /* 기본적으로 숨김 (JavaScript로 나타나게 할 것) */
+    position: fixed; /* 화면에 고정 */
+    bottom: 30px; /* 아래쪽에서 30px 위로 */
+    right: 30px; /* 오른쪽에서 30px 왼쪽으로 */
+    z-index: 999; /* 다른 요소들 위에 표시 */
+    border: none;
+    outline: none;
+    background-color: #a0522d; /* 버튼 배경색 */
+    color: white; /* 글자색 */
+    cursor: pointer; /* 마우스 오버 시 손가락 모양 */
+    padding: 15px 20px;
+    border-radius: 50%; /* 원형 버튼 */
+    font-size: 24px; /* 화살표 크기 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* 호버 및 나타날 때 부드러운 전환 */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #8b4513; /* 호버 시 색상 변경 */
+    transform: translateY(-3px); /* 살짝 위로 움직이는 효과 */
+}
+
+/* 모바일 환경에서 버튼 크기 조절 */
+@media (max-width: 480px) {
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 16px;
+        font-size: 20px;
+    }
+}

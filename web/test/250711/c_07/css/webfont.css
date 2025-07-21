@@ -1,0 +1,15 @@
+
+    /* Do it! 구글 폰트 사용하기 */
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Rubik+Puddles&family=Stylish&display=swap');
+
+    body {
+      background:url('/250711/c_07/images/bg.jpg') no-repeat fixed;
+      background-size:cover;
+      text-align:center;
+    }
+    h1 {
+        font-family: "Rubik Puddles", system-ui;  
+        font-size:120px; 
+        color: #fff;  
+    }

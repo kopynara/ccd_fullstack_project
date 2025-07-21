@@ -1,0 +1,11 @@
+
+    body {
+      background:url('/250711/c_07/images/bg-2.jpg') no-repeat fixed;
+      background-size:cover;
+      text-align:center;
+    }
+    h1 {
+      font-size:180px;
+      /* Do it! 글자색 지정하기 */
+      color: rgba(255, 255, 255, 0.377);
+    }

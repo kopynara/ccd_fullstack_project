@@ -1,0 +1,18 @@
+/* 모든 div에 공통적으로 적용되는 스타일 */
+div {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: antiquewhite; /* 기본 배경색 */
+    margin-bottom: 20px; /* 두 div 사이에 간격 추가 */
+}
+
+/* .grad 클래스가 적용된 div에만 적용되는 스타일 */
+.grad {
+    background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px)
+}
+
+/* .circle 클래스가 적용된 div에만 적용되는 스타일 */
+.circle {
+    background: repeating-radial-gradient(circle, white, white 10%, gray 10%, gray 20%);
+}
